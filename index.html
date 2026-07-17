@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julie Sas Mimos · Lembrancinhas & Mimos de Festa</title>
+<meta name="description" content="Kits de lembrancinhas prontos pra presentear: festas infantis, aniversários e chás. Pintura, festa, spa e guloseimas. Feito com carinho. Pedidos pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{ --teal:#0D5C63; --teal-dark:#09454A; --graf:#2B2A2E; --off:#FAF6F1; --aqua:#D6EAE8; --aqua2:#EAF4F3; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',sans-serif;background:var(--off);color:var(--graf);line-height:1.6}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  nav{position:sticky;top:0;background:rgba(250,246,241,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--aqua);z-index:10}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-size:19px;font-weight:300;color:var(--graf);text-decoration:none}
+  .brand b{font-weight:700;color:var(--teal)}
+  nav .links{display:flex;align-items:center}
+  nav .links a{color:var(--graf);text-decoration:none;font-size:13.5px;margin-left:22px}
+  nav .links a:hover{color:var(--teal)}
+  .bag-btn{position:relative;margin-left:22px;background:var(--teal);border:none;color:var(--off);padding:9px 18px;border-radius:24px;font-weight:500;font-size:13.5px;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:8px}
+  .bag-count{background:var(--off);color:var(--teal);font-weight:700;font-size:11.5px;min-width:20px;height:20px;border-radius:10px;display:flex;align-items:center;justify-content:center;padding:0 5px}
+
+  header{padding:68px 0 60px;text-align:center}
+  .bow{margin-bottom:14px}
+  h1{font-size:clamp(34px,6vw,56px);font-weight:300;letter-spacing:-.5px}
+  h1 b{font-weight:700;color:var(--teal)}
+  .tagline{margin-top:10px;font-size:14px;letter-spacing:4px;text-transform:uppercase;color:#6b6a70}
+  .hero-sub{max-width:560px;margin:22px auto 0;font-size:16.5px;color:#4c4b52}
+  .hero-btns{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;border:none;cursor:pointer;font-family:inherit;padding:14px 30px;border-radius:30px;text-decoration:none;font-weight:600;font-size:15px;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(13,92,99,.25)}
+  .btn-primary{background:var(--teal);color:var(--off)}
+  .btn-ghost{background:transparent;border:2px solid var(--teal);color:var(--teal)}
+  .selos{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .selo{background:var(--aqua2);border:1px solid var(--aqua);color:var(--teal-dark);font-size:12.5px;font-weight:500;padding:7px 16px;border-radius:20px}
+
+  section{padding:60px 0}
+  .sec-title{text-align:center;font-size:28px;font-weight:600;margin-bottom:8px}
+  .sec-title span{color:var(--teal)}
+  .sec-sub{text-align:center;color:#6b6a70;font-size:14.5px;max-width:520px;margin:0 auto 40px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+  .card{background:#fff;border:1px solid var(--aqua);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(13,92,99,.12)}
+  .card .foto{height:210px;background:var(--aqua2);overflow:hidden}
+  .card .foto img{width:100%;height:100%;object-fit:cover;display:block}
+  .card .body{padding:22px;flex:1;display:flex;flex-direction:column}
+  .card h3{font-size:18px;font-weight:600}
+  .card .desc{font-size:13.5px;color:#5a5960;margin:8px 0 14px;flex:1}
+  .preco{font-size:24px;font-weight:700;color:var(--teal)}
+  .preco small{font-size:12px;font-weight:400;color:#6b6a70}
+  .card .btn{margin-top:14px;text-align:center;padding:11px;font-size:13.5px}
+  .badge{display:inline-block;background:var(--teal);color:var(--off);font-size:10.5px;font-weight:600;letter-spacing:1px;padding:4px 10px;border-radius:12px;margin-bottom:10px;text-transform:uppercase}
+  .badge.soon{background:#c9c7cd;color:#fff}
+
+  .pacotes{background:var(--teal);color:var(--off);border-radius:24px;padding:46px 36px;text-align:center}
+  .pacotes h2{font-size:26px;font-weight:600}
+  .pacotes p{color:var(--aqua);font-size:14.5px;max-width:560px;margin:10px auto 28px}
+  .pac-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .pac{background:rgba(250,246,241,.08);border:1px solid rgba(214,234,232,.35);border-radius:16px;padding:20px 26px;min-width:190px}
+  .pac .n{font-size:15px;font-weight:600}
+  .pac .v{font-size:26px;font-weight:700;margin-top:4px}
+  .pac .obs{font-size:11.5px;color:var(--aqua);margin:4px 0 12px}
+  .pac button{background:var(--off);color:var(--teal);border:none;font-family:inherit;font-weight:600;font-size:12.5px;padding:9px 18px;border-radius:20px;cursor:pointer}
+  .pac button:hover{transform:translateY(-1px)}
+
+  .passos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+  .passo{text-align:center;padding:26px 18px;background:#fff;border:1px solid var(--aqua);border-radius:18px}
+  .passo .num{width:42px;height:42px;border-radius:50%;background:var(--teal);color:var(--off);font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+  .passo h4{font-size:15.5px;font-weight:600;margin-bottom:6px}
+  .passo p{font-size:13px;color:#5a5960}
+
+  footer{background:var(--graf);color:#cfcdd4;padding:46px 0 34px;text-align:center;font-size:13px}
+  footer .brand{color:#fff;font-size:22px}
+  footer .brand b{color:var(--aqua)}
+  footer .social{margin:18px 0}
+  footer .social a{color:var(--aqua);text-decoration:none;margin:0 12px;font-size:13.5px}
+  footer .legal{margin-top:18px;font-size:11px;color:#8a8890}
+
+  /* sacola drawer */
+  .overlay{position:fixed;inset:0;background:rgba(43,42,46,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:30}
+  .overlay.open{opacity:1;pointer-events:auto}
+  .drawer{position:fixed;top:0;right:-420px;width:min(400px,100vw);height:100%;background:var(--off);z-index:40;transition:right .3s ease;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.18)}
+  .drawer.open{right:0}
+  .drawer-head{background:var(--teal);color:var(--off);padding:18px 22px;display:flex;justify-content:space-between;align-items:center}
+  .drawer-head h3{font-size:17px;font-weight:600}
+  .drawer-head button{background:none;border:none;color:var(--off);font-size:26px;cursor:pointer;line-height:1}
+  .drawer-items{flex:1;overflow-y:auto;padding:16px 18px}
+  .empty{color:#8a8890;text-align:center;margin-top:60px;font-size:14px}
+  .item{background:#fff;border:1px solid var(--aqua);border-radius:14px;padding:14px;margin-bottom:12px}
+  .item .top{display:flex;justify-content:space-between;gap:10px}
+  .item .nm{font-size:13.5px;font-weight:600;flex:1}
+  .item .rm{background:none;border:none;color:#b0aeb6;cursor:pointer;font-size:17px;line-height:1}
+  .item .rm:hover{color:#d33}
+  .item .bottom{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+  .qty{display:flex;align-items:center;gap:10px}
+  .qty button{width:28px;height:28px;border-radius:8px;border:1.5px solid var(--teal);background:#fff;color:var(--teal);font-size:16px;font-weight:600;cursor:pointer;line-height:1}
+  .qty span{font-weight:600;font-size:14px;min-width:18px;text-align:center}
+  .item .sub{font-weight:700;color:var(--teal);font-size:14.5px}
+  .drawer-foot{border-top:1px solid var(--aqua);padding:16px 18px 20px;background:#fff}
+  .total-line{display:flex;justify-content:space-between;font-size:16px;font-weight:700;margin-bottom:4px}
+  .total-line .v{color:var(--teal);font-size:20px}
+  .frete-obs{font-size:11.5px;color:#8a8890;margin-bottom:12px}
+  .drawer-foot input{width:100%;border:1.5px solid var(--aqua);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:13.5px;margin-bottom:10px;background:var(--off);color:var(--graf)}
+  .drawer-foot input:focus{outline:none;border-color:var(--teal)}
+  .checkout{width:100%;background:#25D366;color:#fff;border:none;font-family:inherit;font-weight:700;font-size:15px;padding:15px;border-radius:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px}
+  .checkout:hover{filter:brightness(1.05)}
+  .checkout:disabled{background:#c9c7cd;cursor:not-allowed}
+
+  /* toast */
+  .toast{position:fixed;bottom:96px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--graf);color:#fff;font-size:13.5px;padding:11px 22px;border-radius:24px;opacity:0;transition:all .3s;z-index:50;pointer-events:none}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  .zap{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:20;transition:transform .15s}
+  .zap:hover{transform:scale(1.08)}
+  @media(max-width:640px){ nav .links a:not(.cta){display:none} }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#">julie sas <b>mimos</b></a>
+    <div class="links">
+      <a href="#kits">Kits</a>
+      <a href="#pacotes">Pacotes</a>
+      <a href="#como">Como funciona</a>
+      <button class="bag-btn" onclick="openBag()">🎀 Sacola <span class="bag-count" id="bagCount">0</span></button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="bow"><svg width="64" height="34" viewBox="0 0 26 14"><polygon points="11.5,7 1,1 1,13" fill="#0D5C63"/><polygon points="14.5,7 25,1 25,13" fill="#0D5C63"/><circle cx="13" cy="7" r="2" fill="#0D5C63"/></svg></div>
+  <h1>julie sas <b>mimos</b></h1>
+  <div class="tagline">lembrancinhas &amp; mimos de festa</div>
+  <p class="hero-sub">Kits de lembrancinhas prontos pra presentear — festas infantis, aniversários e chás. Montados um a um, fechados com laço e <b>feitos com carinho</b>.</p>
+  <div class="hero-btns">
+    <a class="btn btn-primary" href="#kits">Ver os kits</a>
+    <a class="btn btn-ghost" href="https://wa.me/5511997329075?text=Oi%2C%20Julie!%20Quero%20um%20or%C3%A7amento%20de%20lembrancinhas%20para%20minha%20festa%20%F0%9F%8E%80" target="_blank">Orçamento pra festa</a>
+  </div>
+  <div class="selos">
+    <span class="selo">🎀 Montado à mão</span>
+    <span class="selo">📦 Enviamos pra todo o Brasil</span>
+    <span class="selo">💳 Pix, cartão e link de pagamento</span>
+    <span class="selo">✨ Produtos lacrados de marcas conhecidas</span>
+  </div>
+</header>
+
+<section id="kits">
+  <div class="wrap">
+    <h2 class="sec-title">Nossos <span>kits</span></h2>
+    <p class="sec-sub">Cada kit vem na caixinha com visor, fita e o selo Julie Sas Mimos. Adicione à sacola e finalize pelo WhatsApp.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="foto"><img src="img/festa.jpg" alt="Kit Festa Mini"></div>
+        <div class="body">
+          <span class="badge">Mais pedido</span>
+          <h3>Kit Festa Mini</h3>
+          <p class="desc">Massinha de modelar, cartela de adesivos, giz de cera e um desenho pra colorir. Diversão que rende o dia todo.</p>
+          <div class="preco">R$ 14,90 <small>/ unidade</small></div>
+          <button class="btn btn-primary" onclick="add('festa')">Adicionar à sacola</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="foto"><img src="img/spa.jpg" alt="Kit Spa Mini"></div>
+        <div class="body">
+          <span class="badge">Queridinho</span>
+          <h3>Kit Spa Mini</h3>
+          <p class="desc">Máscara facial, lip mask hidratante e uma piranha fofa que fica de lembrança. Perfeito pra festas de menina e chás.</p>
+          <div class="preco">R$ 13,90 <small>/ unidade</small></div>
+          <button class="btn btn-primary" onclick="add('spa')">Adicionar à sacola</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="foto"><img src="img/pintura.jpg" alt="Kit Pintura Mini"></div>
+        <div class="body">
+          <span class="badge">Criativo</span>
+          <h3>Kit Pintura Mini</h3>
+          <p class="desc">Giz de cera, caneta ponta dupla, desenho pra colorir e uma borrachinha surpresa. Pros pequenos artistas.</p>
+          <div class="preco">R$ 12,90 <small>/ unidade</small></div>
+          <button class="btn btn-primary" onclick="add('pintura')">Adicionar à sacola</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="foto"><img src="img/guloseimas.jpg" alt="Kit Guloseimas"></div>
+        <div class="body">
+          <span class="badge">Docinho</span>
+          <h3>Kit Guloseimas</h3>
+          <p class="desc">Bala Fini, salgadinho e geladinho. Simples, gostoso e do jeitinho que a criançada ama.</p>
+          <div class="preco">R$ 7,00 <small>/ unidade</small></div>
+          <button class="btn btn-primary" onclick="add('guloseimas')">Adicionar à sacola</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pacotes">
+  <div class="wrap">
+    <div class="pacotes">
+      <h2>Pacotes pra festa 🎉</h2>
+      <p>Vai presentear a festa inteira? Nos pacotes fechados o preço por kit cai — e a gente personaliza a tag com o nome do aniversariante.</p>
+      <div class="pac-grid">
+        <div class="pac"><div class="n">Combo Completo</div><div class="v">R$ 39,90</div><div class="obs">1 de cada kit · economize R$ 8,80</div><button onclick="add('combo')">Adicionar 🎀</button></div>
+        <div class="pac"><div class="n">10 kits Festa</div><div class="v">R$ 149</div><div class="obs">sai R$ 14,90/kit</div><button onclick="add('festa10')">Adicionar 🎀</button></div>
+        <div class="pac"><div class="n">20 kits Festa</div><div class="v">R$ 283,10</div><div class="obs">5% off · sai R$ 14,15/kit</div><button onclick="add('festa20')">Adicionar 🎀</button></div>
+        <div class="pac"><div class="n">Festa maior?</div><div class="v">a combinar</div><div class="obs">30, 50 kits — pede orçamento</div><button onclick="window.open('https://wa.me/5511997329075?text=Oi%2C%20Julie!%20Quero%20or%C3%A7amento%20de%20um%20pacote%20grande%20de%20kits%20%F0%9F%8E%89','_blank')">Pedir orçamento</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <h2 class="sec-title">Como <span>funciona</span></h2>
+    <p class="sec-sub">Simples assim — do pedido à festa em poucos dias.</p>
+    <div class="passos">
+      <div class="passo"><div class="num">1</div><h4>Monte sua sacola</h4><p>Escolha kits e pacotes aqui no site e finalize — o pedido chega prontinho no nosso WhatsApp.</p></div>
+      <div class="passo"><div class="num">2</div><h4>A gente combina</h4><p>Confirmamos estoque, frete e pagamento (Pix ou cartão pelo link). Montagem em até 3 dias úteis.</p></div>
+      <div class="passo"><div class="num">3</div><h4>Festa pronta</h4><p>Entrega pra todo o Brasil ou retirada combinada na região de Cotia/Granja Viana (SP).</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">julie sas <b>mimos</b></div>
+    <div class="social">
+      <a href="https://instagram.com/juliesas.mimos" target="_blank">Instagram</a> ·
+      <a href="https://tiktok.com/@juliesas.mimos" target="_blank">TikTok</a> ·
+      <a href="https://wa.me/5511997329075" target="_blank">WhatsApp (11) 99732-9075</a>
+    </div>
+    <div>Também sou consultora Natura · Avon · O Boticário — peça seu catálogo 💚</div>
+    <div class="legal">Julie Sas Mimos · CNPJ 66.193.357/0001-41 · Cotia/SP · Bebidas alcoólicas: venda proibida para menores de 18 anos.</div>
+  </div>
+</footer>
+
+<!-- sacola -->
+<div class="overlay" id="overlay" onclick="closeBag()"></div>
+<aside class="drawer" id="drawer" aria-label="Sacola">
+  <div class="drawer-head">
+    <h3>🎀 Sua sacola</h3>
+    <button onclick="closeBag()" aria-label="Fechar">×</button>
+  </div>
+  <div class="drawer-items" id="bagItems"></div>
+  <div class="drawer-foot">
+    <div class="total-line"><span>Total</span><span class="v" id="bagTotal">R$ 0,00</span></div>
+    <div class="frete-obs">+ frete (a combinar no WhatsApp) · retirada em Cotia/Granja Viana é grátis</div>
+    <input type="text" id="cliNome" placeholder="Seu nome (opcional)">
+    <input type="text" id="cliObs" placeholder="Data da festa / observações (opcional)">
+    <button class="checkout" id="checkoutBtn" onclick="checkout()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.8-.7-1.3-1.5-1.4-1.8-.2-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4z"/></svg>
+      Finalizar pedido no WhatsApp
+    </button>
+  </div>
+</aside>
+
+<div class="toast" id="toast">Adicionado à sacola 🎀</div>
+
+<a class="zap" href="https://wa.me/5511997329075?text=Oi%2C%20Julie!%20Vim%20pelo%20site%20%F0%9F%8E%80" target="_blank" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.8-.7-1.3-1.5-1.4-1.8-.2-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script>
+const PRODUCTS = {
+  festa:     { nome:'Kit Festa Mini',            preco:14.90 },
+  spa:       { nome:'Kit Spa Mini',              preco:13.90 },
+  pintura:   { nome:'Kit Pintura Mini',          preco:12.90 },
+  guloseimas:{ nome:'Kit Guloseimas',            preco:7.00 },
+  combo:     { nome:'Combo Completo (1 de cada)',preco:39.90 },
+  festa10:   { nome:'Pacote 10 kits Festa',      preco:149.00 },
+  festa20:   { nome:'Pacote 20 kits Festa',      preco:283.10 }
+};
+const ZAP='5511997329075';
+const KEY='jsm-sacola';
+let bag={};
+try{ bag=JSON.parse(localStorage.getItem(KEY))||{}; }catch(e){ bag={}; }
+
+const fmt=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+function save(){ localStorage.setItem(KEY,JSON.stringify(bag)); }
+
+function add(id){
+  bag[id]=(bag[id]||0)+1;
+  save(); render();
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('show'),1600);
+}
+function setQty(id,q){
+  if(q<=0) delete bag[id]; else bag[id]=q;
+  save(); render();
+}
+function render(){
+  const cont=document.getElementById('bagItems');
+  const ids=Object.keys(bag);
+  let total=0, count=0;
+  if(!ids.length){
+    cont.innerHTML='<div class="empty">Sua sacola está vazia 🎀<br>Escolha um kit ali em cima!</div>';
+  } else {
+    cont.innerHTML=ids.map(id=>{
+      const p=PRODUCTS[id]; const q=bag[id]; const sub=p.preco*q;
+      total+=sub; count+=q;
+      return `<div class="item">
+        <div class="top"><span class="nm">${p.nome}</span><button class="rm" onclick="setQty('${id}',0)" aria-label="Remover">🗑</button></div>
+        <div class="bottom">
+          <div class="qty">
+            <button onclick="setQty('${id}',${q-1})">−</button><span>${q}</span><button onclick="setQty('${id}',${q+1})">+</button>
+          </div>
+          <span class="sub">${fmt(sub)}</span>
+        </div>
+      </div>`;
+    }).join('');
+  }
+  document.getElementById('bagTotal').textContent=fmt(total);
+  document.getElementById('bagCount').textContent=count;
+  document.getElementById('checkoutBtn').disabled=!ids.length;
+}
+function openBag(){ document.getElementById('drawer').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
+function closeBag(){ document.getElementById('drawer').classList.remove('open'); document.getElementById('overlay').classList.remove('open'); }
+
+function checkout(){
+  const ids=Object.keys(bag);
+  if(!ids.length) return;
+  let total=0;
+  let linhas=ids.map(id=>{
+    const p=PRODUCTS[id]; const q=bag[id]; const sub=p.preco*q; total+=sub;
+    return `• ${q}x ${p.nome} — ${fmt(sub)}`;
+  });
+  const nome=document.getElementById('cliNome').value.trim();
+  const obs=document.getElementById('cliObs').value.trim();
+  let msg='Oi, Julie! Quero fazer um pedido 🎀\n\n'+linhas.join('\n')+`\n\nTotal: ${fmt(total)} (+ frete a combinar)`;
+  if(nome) msg+=`\n\nNome: ${nome}`;
+  if(obs) msg+=`\nObservações: ${obs}`;
+  msg+='\n\nPedido feito pelo site 💚';
+  window.open(`https://wa.me/${ZAP}?text=${encodeURIComponent(msg)}`,'_blank');
+}
+render();
+</script>
+</body>
+</html>
